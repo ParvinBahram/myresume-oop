@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+html{
+  @apply  scroll-smooth
+}
+
+.item{
+  @apply  px-4 py-2  rounded-lg md:mx-2  mb-2 md:mb-0 text-lg font-bold md:text-center
+}
+
+.btn{
+  @apply  text-center rounded-xl bg-purple-800 py-2 px-4 text-white outline-0 border-none  text-lg bg-purple-900 hover:bg-purple-600 hover:shadow-2xl 
+}
+
+
+.nav_links{
+  @apply flex flex-col w-full  max-h-0 opacity-0
+  md:flex-row  md:items-center md:w-auto md:max-h-screen md:opacity-100
+}
+.nav_links.open {
+  @apply max-h-screen opacity-100;
+}
+
+.nav.nav_expanded .nav_links{
+  @apply max-h-screen opacity-100 
+}
+
+ .nav.nav_expanded #toggler .mobile-menu{
+  @apply  opacity-0 scale-50 pointer-events-none
+}
+
+.nav.nav_expanded #toggler .closeBtn{
+  @apply opacity-100 scale-100 pointer-events-auto
+}
+
+p{
+  @apply text-xl
+}
+
+label{
+  @apply text-purple-700 dark:text-white
+}
+
+.input-style{
+  @apply  border border-2 border-purple-400  focus:border-purple-600  focus:outline-none  rounded-md bg-white dark:text-black
+}
+
+.error-input-style{
+  @apply  border  border-red-400   focus:outline-none  focus:border-red-500 rounded-md bg-white dark:text-black
+}
+
+.nav.nav_expanded a{
+  @apply  md:w-auto
+}
+
+.btn-secondary{
+  @apply  p-1  cursor-pointer rounded-sm text-purple-600 text-lg hover:bg-purple-200 /*dark:text-white dark:hover:bg-none*/
+  }
+
+nav.nav_expanded a.link{
+  @apply pl-6 pt-3 pb-3 no-underline
+}
+
+.link{
+  @apply  no-underline hover:text-purple-600
+}
+
+.dropdown-menu a{
+  @apply block text-purple-800 mb-4 pb-2 cursor-pointer border-b-2 border-b-gray-300 hover:text-purple-500
+}
+
+.dropdown-item{
+  @apply text-sm text-center 
+}
+
+.btn-filter{
+  @apply cursor-pointer flex text-center justify-center px-4 hover:bg-purple-200 dark:text-black
+}
+
+.category-list{
+  @apply space-y-4
+}
+.active-filter-btn{
+  @apply  border-2 border-purple-500 rounded-md bg-purple-200  dark:text-purple-700 
+}
+
+.badge{
+  @apply text-sm rounded-full text-purple-800  w-[35%] p-1 flex items-center justify-end
+}
+
+.status{
+  @apply text-sm text-purple-600
+}

@@ -75,14 +75,18 @@ nav.nav_expanded a.link{
   @apply text-sm text-center 
 }
 
-.btn-filter{
-  @apply cursor-pointer flex text-center justify-center px-4 hover:bg-purple-200 dark:text-black
+li.btn-filter{
+  @apply cursor-pointer flex text-center justify-center p-2 mx-2 hover:bg-purple-100 dark:text-black 
+  
 }
 
 .category-list{
   @apply space-y-4
 }
-.active-filter-btn{
+
+
+
+.active-btn-filter{
   @apply  border-2 border-purple-500 rounded-md bg-purple-200  dark:text-purple-700 
 }
 

@@ -15,8 +15,52 @@
    <main id="main" class="py-16 shadow-lg">
       <h2 class="text-center text-3xl font-bold mt-16 mb-10" >پروژه های انجام شده</h2>
       <div id="main-wrapper" class="flex flex-col gap-x-2 md:grid  md:items-start md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_3fr] md:gap-4 ">
-     <div id="oop-filter" class="md:px-4 py-8 flex flex-col justify-around md:justify-between gap-x-2 items-center  md:border md:border-gray-300 md:rounded-lg  overflow-x-auto md:overflow-hidden whitespace-nowrap"
-        data-filter-category="true">
+        
+        <div id="oop-filter" class=" mb-6 md:px-4  md:mr-4 py-8 flex flex-col justify-center md:justify-between gap-x-2 items-center md:border md:border-gray-300 md:rounded-lg  overflow-x-auto md:overflow-hidden whitespace-nowrap" >
+           <div class="px-4 shrink-0 md:shrink-1 mb-6 z-50">
+   <div id="category-btn" class="flex w-max justify-between cursor-pointer gap-x-2  items-center mx-auto border border-gray-300 rounded-lg">
+     <p class="md:text-xl md:span-2 py-2 px-1 text-right shrink-0 md:shrink-1"> دسته‌بندی</p>
+     <span class="md:pl-2 px-1"><i data-lucide="chevron-down"></i></span>
+    </div>
+  <div id="category-menu" class="hidden  md:static mx-auto justify-center  my-2 w-35 bg-white border rounded-lg border-gray-300 shadow-lg z-10 ">
+        <ul class="category-list text-center py-4 ">
+        <li class="btn-filter " data-category="all">همه</li>
+        <li class="btn-filter " data-category="html-css">Html-Css</li>
+        <li class="btn-filter " data-category="tailwind">تیلویند</li>
+        <li class="btn-filter " data-category="js">JS</li>
+        <li class="btn-filter " data-category="react">ری‌اکت</li>
+        <li class="btn-filter " data-category="next">نکست</li>
+        <li class="btn-filter " data-category="wp">وردپرسی</li>
+        <li class="btn-filter " data-category="seo">سئو</li>
+      </ul>
+        </div>
+        </div>
+        <div class="relative mb-6 ">
+    <!-- <p id="date-filter-btn" class=" md:text-lg md:hidden shrink-0  whitespace-nowrap cursor-pointer border border-gray-300 rounded-lg p-2">فیلتر تاریخ</p> -->
+  <div id="date-filter" class=" bg-white dark:bg-gray-800  md:static md:flex md:px-6 md:my-4 space-y-2 flex flex-col ">
+   <label class="text-black ">
+    <span class="">از تاریخ</span>
+    <input type="range" id="startDate" min="0" max="1000" value="0" class="md:w-20 lg:w-25 rounded ">
+    <span class="text-black dark:text-white" id="startDateLabel"></span>
+   </label>
+   <label class="text-black ">
+    <span class="">تا تاریخ</span>
+    <input type="range" id="endDate"  min="0" max="1000" value="1000" class="md:w-20 lg:w-25 rounded ">
+   <span class=" text-black dark:text-white" id="endDateLabel"></span>
+  </label>
+   <button id="filterDateBtn" class="border-2 mx-auto border-purple-700 bg-purple-200 text-purple-700 w-40 px-4 py-1 rounded-xl"> اعمال فیلتر</button>
+</div>
+</div>
+        <div class="flex md:items-center shrink-0">
+      <label for="complete-toggle" class="flex cursor-pointer text-lg items-center gap-2 shrink-0 whitespace-nowrap py-1" > 
+       پروژه های انجام شده
+      <div class=" relative pr-4 items-center">
+      <input id="complete-toggle" type="checkbox" class="sr-only peer " aria-label="completeToggle" >
+      <div class="w-12 h-6 bg-gray-300  peer-checked:bg-blue-600 dark:bg-gray-600 rounded-full transition-colors items-center"></div>
+      <div class="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md transition-transform peer-checked:translate-x-6.5"></div>
+      </div>
+      </label>
+    </div>
         </div>
         <div id="projects" class="oop-projects "></div>
         </div>
